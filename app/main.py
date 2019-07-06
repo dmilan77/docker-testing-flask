@@ -1,8 +1,7 @@
 from flask import Flask
 from flask_restplus import Resource, Api
 import socket, os
-import fcntl
-import struct
+import json
 
 
 
@@ -19,9 +18,7 @@ class PingWorld(Resource):
             'hostname': host_name,
             'host_ip': host_ip
         }
-
-
-
+        # return json.dumps(outPut)
         return outPut
 
 
