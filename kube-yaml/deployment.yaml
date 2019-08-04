@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-restapp-flask-deployment
+  labels:
+    app: sample-restapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-restapp
+  template:
+    metadata:
+      labels:
+        app: sample-restapp
+    spec:
+      containers:
+      - name: sample-restapp
+        image: dmilan/docker-sample-restapp-flask
+        ports:
+        - containerPort: 8080
