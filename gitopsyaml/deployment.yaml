@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: sample-restapp
-        image: dmilan/docker-sample-restapp-flask:r1
+        image: dmilan/docker-sample-restapp-flask:r1.01
         ports:
         - containerPort: 8080
