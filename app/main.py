@@ -15,6 +15,7 @@ class PingWorld(Resource):
         host_ip = socket.gethostbyname(host_name)
 
         outPut={
+            'release': 'r1',
             'hostname': host_name,
             'host_ip': host_ip
         }
