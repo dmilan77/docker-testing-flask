@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-restapp-flask-deployment
+  labels:
+    app: sample-restapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-restapp
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "true"
+      labels:
+        app: sample-restapp
+    spec:
+      containers:
+      - name: sample-restapp
+        image: dmilan/docker-sample-restapp-flask
+        ports:
+        - containerPort: 8080
+
