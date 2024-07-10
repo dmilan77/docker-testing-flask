@@ -2,3 +2,4 @@ Werkzeug==0.16.1
 flask==1.0.3
 flask-restplus==0.12.1
 requests==2.22.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
