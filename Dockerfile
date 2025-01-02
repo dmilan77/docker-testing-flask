@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.14.0a3-slim
 
 MAINTAINER Milan Das "milan.das77@gmail.com"
 ENV APP_HOME /dockerapp
